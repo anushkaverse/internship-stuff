@@ -1,17 +1,19 @@
-# IT Asset Tracker
+# Engineer Allocation Tool
 
-A basic Python CLI tool to manage IT assets like laptops, CCTVs, routers, etc.
+A Python CLI tool to manage the allocation of IT engineers based on skill level, location, specialization, and availability.
 
-## Features:
-- View all assets
-- Filter by status (e.g., "Available", "Under Repair")
-- Update status of any asset
-- Saves data to CSV
+## Features
+- View all engineers
+- Filter by skill level, location, and specialization
+- Allocate engineers to clients
+- Log all allocations in `allocation_log.csv`
 
-## Tech Used:
+## Technologies Used
 - Python 3
-- pandas library
+- pandas
+- datetime
 
-## How to Run:
-1. Install pandas: `pip install pandas`
-2. Run script: `python asset_tracker.py`
+## How to Run
+1. Make sure Python and pandas are installed: `pip install pandas`
+2. Place `engineers.csv` and `engineer_allocation_tool.py` in the same folder.
+3. Run the script: `python engineer_allocation_tool.py`
