@@ -3,49 +3,66 @@
 This repository contains three key automation tools developed during my internship at **Trinity Infonet Solutions**, built using **Python** for internal IT process optimization. These tools were created to simplify and streamline operations related to **engineer deployment**, **IT asset tracking**, and **AMC (Annual Maintenance Contract) management**.
 
 ---
+## 📦 Contents
 
-## 📦 Tools Included
+### 🔧 Engineer Allocation Tool  
+Assign engineers to clients based on skill level, location, and availability.
 
-### 1. 🚀 Engineer Allocation Tool
-A Python-based script to automatically allocate available engineers to new client tickets based on workload, availability, and expertise. The tool reads engineer logs, assigns tasks intelligently, and maintains an up-to-date assignment sheet.
+- `engineer_allocation_tool.py`  
+- `engineers.csv`  
+- Generates `allocation_log.csv` after assignments
 
-**Features:**
-- Reads real-time ticket data from `.csv`/`.xls`
-- Dynamic allocation logic based on availability
-- Auto-updates master sheet with assigned engineers
-
----
-
-### 2. 💻 IT Asset Tracker
-A file-handling-based system that parses, cleans, and updates asset inventories using structured data files. It helps maintain a clear record of assets across departments, flagging duplicates and missing entries.
-
-**Features:**
-- Reads and processes `.csv` inventory files
-- Detects duplicate/missing asset entries
-- Categorizes assets by department/type
+**Features:**  
+- View all engineers  
+- Filter by skill, location, or specialization  
+- Allocate engineer and update availability
 
 ---
 
-### 3. 🔔 Automatic AMC Reminder Tool
-A Python script that scans asset purchase and AMC renewal dates to send timely alerts when contracts are about to expire.
+### 📬 AMC Reminder Mailer  
+Identifies AMCs nearing expiry and simulates reminder email generation.
 
-**Features:**
-- Scans for assets nearing AMC expiration
-- Sends email alerts (or logs them for manual action)
-- Helps IT teams stay compliant and avoid downtime
+- `amc_reminder_mailer.py`  
+- `amc_data.csv`  
+
+**Features:**  
+- Detects AMCs expiring within 7 days  
+- Prints email-style reminders for clients  
+- Ready to integrate with real email APIs
+
+---
+
+### 🗂️ IT Asset Tracker  
+Track asset usage and status within an IT infrastructure.
+
+- `asset_tracker.py`  
+- `asset_data.csv`  
+
+**Features:**  
+- View assets by type or status  
+- Update asset availability or condition  
+- Simulates real-time asset status management
 
 ---
 
-## 🧰 Technologies & Libraries Used
+## 🧰 Tools & Libraries
 
-- Python 3.10+
-- Pandas
-- Openpyxl
-- Datetime module
-- OS / Sys modules
-- Email (smtplib) – optional setup
+- Python 3  
+- pandas  
+- datetime  
+- CLI-based interaction with CSV files
 
 ---
+
+## ▶️ How to Run
+
+bash
+pip install pandas
+python engineer_allocation_tool.py
+python amc_reminder_mailer.py
+python asset_tracker.py
+
+
 
 ## ✅ Outcomes
 
