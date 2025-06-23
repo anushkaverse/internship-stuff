@@ -14,13 +14,13 @@ reminder_days = 7
 df['AMC Expiry Date'] = pd.to_datetime(df['AMC Expiry Date']).dt.date
 upcoming = df[df['AMC Expiry Date'] <= (today + timedelta(days=reminder_days))]
 
-# Email sending function (demo only - prints instead of sending)
+# Email sending function (ye yha sirf print krta h- demo ke liye)
 def send_email(to_email, client_name, asset_id, asset_type, expiry_date):
     subject = f"AMC Expiry Reminder for {asset_type} ({asset_id})"
     body = f"""Dear {client_name},
 
-This is a reminder that the AMC for your {asset_type} (Asset ID: {asset_id}) is expiring on {expiry_date}. 
-Please contact us to renew it in time.
+This is a reminder that the AMC for your {asset_type} with Asset ID - {asset_id} is expiring on {expiry_date}. 
+Please contact us to renew it before the mentioned date.
 
 Regards,
 Trinity Infonet Solutions"""
